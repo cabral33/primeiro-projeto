@@ -1,32 +1,17 @@
-# Prerequisites
-*.d
+#include <stdio.h>
+#include <locale.h>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int main (void){
+setlocale(LC_ALL, "portuguese");
 
-# Precompiled Headers
-*.gch
-*.pch
+float n1, n2, n3, n4, total;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+	printf("Digite suas 4 notas respectivamente: ");
+	scanf("%f %f %f %f", &n1, &n2, &n3, &n4);
+	
+	total = (n1+n2+n3+n4)/4;
+	
+	printf("Você ficou com %.1f", total);
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+return 0;
+}
